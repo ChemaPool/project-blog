@@ -46,7 +46,7 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
   gem 'factory_bot'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '> 3.9.0'
   gem 'database_cleaner'
   gem 'mongoid-rspec'
 end
