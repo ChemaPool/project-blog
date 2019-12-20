@@ -1,0 +1,123 @@
+<div class="wrapper">
+  <nav class="menu-head">
+    <div>
+      <%= image_tag 'report/arrow_left', class: "image-head" %>
+    </div>
+    <div>
+      <%= image_tag 'report/homie', class: "image-head" %>
+    </div>
+    <div>
+      <%= image_tag 'report/avatar', class: "image-avatar-head" %>
+    </div>
+  </nav>
+  <hr>
+  
+  <div class="header border">
+    <div>
+      <%= image_tag 'report/logo' %>
+    </div>
+    <div>
+      <%= label_tag("Reporte de Inquilino") %>
+      <%= content_tag(:p, "Fecha: julio 16 2019 Válido hasta: Octubre 16 2019") %>
+      <%= content_tag(:p, "Calculado con Homie Technology que tiene un rango de 0 a 1500") %>
+    </div>
+  </div>
+
+  <div class="container-score">
+    <div class="section-score">
+      <div class="score">
+        <%= label_tag('1052') %>
+        <%= image_tag 'report/circle' %>
+      </div>
+      <div class="range">
+        <div class="range-number">
+          <%= content_tag(:span, '0') %>
+          <%= content_tag(:span, '1500') %>
+        </div>
+        <%= image_tag 'report/range', class: "range-image" %>
+        <div class="container-text-range">
+          <%= content_tag(:span, 'Malo') %>
+          <%= content_tag(:span, 'Medio') %>
+          <%= content_tag(:span, 'Bueno') %>
+          <%= content_tag(:span, 'Excelente') %>
+        </div>
+      </div>
+      <div class="text-range">
+        <%= label_tag("Este puntaje es Bueno") %>
+        <%= content_tag(:span, 'Rango superior al 43% de los inquilinos de México') %>
+      </div>
+    </div>
+    <div class="section-user">
+      <p>Identificación Otorgada: <%= content_tag(:span, 'Verificada') %> </p>
+      <p>Nivel Socioeconómico: <%= content_tag(:span, 'NA') %> </p>
+      <p>Listas negras: <%= content_tag(:span, 'No') %> </p>
+      <p>Prevención de lavado de dinero: <%= content_tag(:span, 'No disponible') %> </p>
+      <p>Redes Sociales vinculadas: <%= content_tag(:span, 'Ninguna') %> </p>
+    </div> 
+  </div>
+  
+  <div class="container-user border">
+    <div class="container-user-left">
+      <%= image_tag 'report/avatar', class: "avatar-circle-image" %>
+    </div>
+    <div class="container-user-right">
+      <%= label_tag("Esteban Manuel Lopez Ramirez") %>
+      <%= content_tag(:p, 'centro, 123, Piso12, Depa 123, Centro, Yucatán') %>
+      <%= content_tag(:span, '$44,000.00') %>
+    </div>
+  </div>
+
+  <div class="container-info border">
+    <div>
+      <%= image_tag 'report/icons/job' %>
+      <label>/ <%= content_tag(:span, 'Empleo') %> </label>
+    </div>
+    <div>
+      <%= image_tag 'report/icons/grade' %>
+      <label>Especialidad-o-diplomado / <%= content_tag(:span, 'UTM') %> </label>
+    </div>
+    <div>
+      <%= image_tag 'report/icons/coins' %>
+      <label>Ingresos verificados <%= content_tag(:span, 'No disponible') %> </label>
+    </div>
+    <div>
+      <%= image_tag 'report/icons/email' %>
+      <label><%= content_tag(:span, 'dev+victor126inquilino@homie.mx') %> </label>
+    </div>
+    <div>
+      <%= image_tag 'report/icons/phone' %>
+      <label><%= content_tag(:span, '9992023842') %> </label>
+    </div>
+    <div>
+      <%= image_tag 'report/icons/people', class: 'image-people' %>
+      <label>Referencia: <%= content_tag(:span, 'Lorena Esther Manzanero Rodriguez') %>
+        centro, 123, Centro, Yucatán, CP 97000</label>
+    </div>
+    <div>
+      <%= image_tag 'report/icons/people', class: 'image-people' %>
+      <label>Referencia: <%= content_tag(:span, 'Catalina Esmeralda Estrada Castro') %>
+        centro, 123, Petrolera, Veracruz, CP 96500</label>
+    </div>
+    <div>
+      <%= image_tag 'report/icons/people', class: 'image-people' %>
+      <label>Referencia: <%= content_tag(:span, 'Luis Manuel Castillo Lopez') %>
+        centro, 123, Centro, Yucatán, CP 97000</label>
+    </div>
+  </div>
+
+  <div class="footer border">
+    <div>
+      <p>Nuestra tecnología nos permite rentar tu inmueble al <span>mejor inquilino</span>,
+        sin <span>ningún riesgo</span> y en <span>tiempo record</span></p>
+    </div>
+    <div>
+      <%= image_tag 'report/homie_footer' %>
+    </div>
+  </div>
+
+  <div class="button-save">
+    <%= link_to 'Guardar' %>
+  </div>
+</div>
+
+<%= stylesheet_link_tag 'report' %>
