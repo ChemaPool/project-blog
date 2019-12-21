@@ -21,6 +21,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'mongoid', '~> 7.0.1' # en Gemfile
+gem 'mongoid-enum', github: 'dingxizheng/mongoid-enum'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -45,8 +46,10 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
-  gem 'factory_bot'
   gem 'rspec-rails', '> 3.9.0'
+  gem 'faker'
+  gem 'ffaker'
+  gem 'factory_bot_rails'
   gem 'database_cleaner'
   gem 'mongoid-rspec'
 end
