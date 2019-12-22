@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Rent
   include Mongoid::Document
   belongs_to :user

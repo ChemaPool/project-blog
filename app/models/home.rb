@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Home
   include Mongoid::Document
   before_validation :set_total_amount
@@ -7,9 +9,9 @@ class Home
   field :home_features, type: Hash, default: { garden: false, furnished: false, gym: false }
   has_many :rents
 
-  # private
+  private
 
-  # def set_total_amount
-  #   self.total_amount = price + extra_service
-  # end
+  def set_total_amount
+    self.total_amount = price + extra_service
+  end
 end
