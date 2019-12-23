@@ -1,5 +1,6 @@
-RSpec.configure do |config|
+# frozen_string_literal: true
 
+RSpec.configure do |config|
   config.before(:suite) do
     DatabaseCleaner[:mongoid].strategy = :truncation
     DatabaseCleaner[:mongoid].clean_with(:truncation)
@@ -12,5 +13,4 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
-
 end

@@ -5,14 +5,15 @@ require 'rails_helper'
 RSpec.describe Owner, type: :model do
   let(:owner) { FactoryBot.build(:owner) }
   describe 'Associations' do
+    it { should belong_to(:user) }
     it { should have_many(:homes) }
   end
 
-  context 'When is valid' do
+  context 'Is valid' do
     it { expect(owner).to be_valid }
+  end
 
-    it 'When save is successful' do
-      expect(owner.save).to be(true)
-    end
+  context 'Save is successful' do
+    it { expect(owner.save).to be(true) }
   end
 end

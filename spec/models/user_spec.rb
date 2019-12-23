@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   let(:user) { FactoryBot.build(:user) }
+
   describe 'Associations' do
     it { should have_many(:rents) }
   end
@@ -13,11 +14,11 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:name) }
   end
 
-  context 'When is valid' do
+  context 'Is valid' do
     it { expect(user).to be_valid }
+  end
 
-    it 'When save is successful' do
-      expect(user.save).to be(true)
-    end
+  context 'Save is successful' do
+    it { expect(user.save).to be(true) }
   end
 end
