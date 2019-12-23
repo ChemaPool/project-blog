@@ -13,4 +13,12 @@ class User
 
   validates :name, :last_name, :mobile_phone, :work_place, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, presence: true
+
+  after_create :send_mail
+
+  private
+
+  def send_mail
+    UserMailer.new_user(self).deliver_now
+  end
 end
