@@ -6,8 +6,8 @@ RSpec.describe Home, type: :model do
   let(:home) { FactoryBot.build(:home) }
 
   describe 'Associations' do
-    it { should belong_to(:owner) }
-    it { should have_many(:rents) }
+    it { is_expected.to belong_to(:owner) }
+    it { is_expected.to have_many(:rents) }
   end
 
   context 'Is valid' do
