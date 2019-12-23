@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 namespace :rails_task do
   desc 'Generate Home'
   task task_generate: :environment do
