@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style>
+    <style type="text/css">
       @font-face {
         font-family: Avenir-next;
-        src: url("/assets/fonts/avenir_next_sv/AvenirNextLTPro-Regular.otf") format("opentype");
+        src: url(<%= asset_url 'avenir_next_sv/AvenirNextLTPro-Regular.otf' %>) format('opentype');
       }
 
       body{
@@ -150,6 +150,10 @@
         /* padding: 5em; */
       }
 
+      .image-list-public {
+        margin: 10px 25px;
+      }
+
       
     </style>
     <title>Registro</title>
@@ -184,31 +188,31 @@
 
             <div class="container-image-center">
               <div>
-                <%= image_tag 'email/lamudi', class: "image-head" %>
+                <%= image_tag 'email/lamudi', class: "image-list-public" %>
               </div>
               <div>
-                <%= image_tag 'email/metros_3', class: "image-head" %>
-              </div>
-            </div>
-
-            <div class="container-image-center">
-              <div>
-                <%= image_tag 'email/inmuebles_24', class: "image-head" %>
-              </div>
-              <div>
-                <%= image_tag 'email/craigslist', class: "image-head" %>
+                <%= image_tag 'email/metros_3', class: "image-list-public" %>
               </div>
             </div>
 
             <div class="container-image-center">
               <div>
-                <%= image_tag 'email/goplaceit', class: "image-head" %>
+                <%= image_tag 'email/inmuebles_24', class: "image-list-public" %>
               </div>
               <div>
-                <%= image_tag 'email/propiedades', class: "image-head" %>
+                <%= image_tag 'email/craigslist', class: "image-list-public" %>
+              </div>
+            </div>
+
+            <div class="container-image-center">
+              <div>
+                <%= image_tag 'email/goplaceit', class: "image-list-public" %>
               </div>
               <div>
-                <%= image_tag 'email/mercadolibre', class: "image-head" %>
+                <%= image_tag 'email/propiedades', class: "image-list-public" %>
+              </div>
+              <div>
+                <%= image_tag 'email/mercadolibre', class: "image-list-public" %>
               </div>
             </div>
           </div>
